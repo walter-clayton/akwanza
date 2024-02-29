@@ -39,7 +39,7 @@ add_image_size( 'my-custom-image-size', 640, 999 );
 
 function enqueue_akwanza_scripts() {
    
-   wp_enqueue_script('d3', get_template_directory_uri() . '/d3.v5.min.js', array(), '5.9.7', true);
+   wp_enqueue_script('d3', get_template_directory_uri() . '/d3.v5.min.js', array(), '5.16.0', true);
 
     // Enqueue your custom script
     wp_enqueue_script('akwanza-script', get_template_directory_uri() . '/script.js', array('d3'), '1.0', true);

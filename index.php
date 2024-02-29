@@ -81,5 +81,4 @@ get_header(); ?>
 </div><!-- #primary -->
 
 <?php
-get enqueue_akwanza_scripts();
 get_footer();

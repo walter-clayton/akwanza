@@ -1,25 +1,47 @@
-
 console.log("Script loaded");
-document.addEventListener('DOMContentLoaded', function(d3) {
-// Define dimensions and margins
-const width = 800;
-const height = 600;
-const margin = { top: 70, right: 20, bottom: 80, left: 80 };
+document.addEventListener("DOMContentLoaded", function () {
+  // Define dimensions and margins
+  const width = 800;
+  const height = 600;
+  const margin = { top: 70, right: 20, bottom: 80, left: 80 };
 
+  // Select the div with id "chart" and append an SVG
+  const svg = d3
+    .select("div#chart")
+    .append("svg")
+    .attr("width", width + 200)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-// Select the div with id "chart" and append an SVG
-const svg = d3
-  .select("div#chart")
-  .append("svg")
-  .attr("width", width + 200)
-  .attr("height", height)
-  .append("g")
-  .attr("transform", `translate(${margin.left},${margin.top})`);
+  // Hardcoded data
+  var data = [
+    {
+      quarter: "Q1 2023",
+      foot: 40938,
+      vehicle: 134650,
+      "total kilometers": 175588,
+    },
+    {
+      quarter: "Q2 2023",
+      foot: 45061,
+      vehicle: 160093,
+      "total kilometers": 205154,
+    },
+    {
+      quarter: "Q3 2023",
+      foot: 50163,
+      vehicle: 162144,
+      "total kilometers": 255317,
+    },
+    {
+      quarter: "Q4 2023",
+      foot: 46107,
+      vehicle: 148052,
+      "total kilometers": 194159,
+    },
+  ];
 
-// Load data from CSV file
-
-d3.csv("<?php echo get_template_directory_uri(); ?>/data.csv").then(function (data) {
-console.log( data);
   // Data processing logic
   const slices = Object.keys(data[0])
     .slice(1)
@@ -34,14 +56,6 @@ console.log( data);
         }),
       };
     });
-  console.log("Column headers", Object.keys(data[0]));
-  console.log("Column headers without quarter", Object.keys(data[0]).slice(1));
-  console.log("Slices", slices);
-  console.log("First slice", slices[0]);
-  console.log("Second slice", slices[1]);
-  console.log("A array", slices[1].values);
-  console.log("Quarter element", slices[0].values[0].quarter);
-  console.log("Array length", slices[0].values.length);
 
   //-----------------------------SCALES-----------------------------
   const xScale = d3
@@ -85,60 +99,40 @@ console.log( data);
       );
   });
 
-  // Append circles and text for each data point (foot)
-
-  slices[0].values.forEach(function (d) {
-    const cx = xScale(d.quarter) + xScale.bandwidth() / 2;
-    const cy = yScale(d.measurement);
-    svg
-      .append("circle")
-      .attr("cx", cx)
-      .attr("cy", cy)
-      .attr("r", 4)
-      .style("fill", "orange");
-    svg
-      .append("text")
-      .attr("x", cx)
-      .attr("y", cy - 8)
-      .style("text-anchor", "middle")
-      .text(d.measurement + " km");
+  // Append circles and text for each data point
+  slices.forEach(function (slice) {
+    slice.values.forEach(function (d) {
+      const cx = xScale(d.quarter) + xScale.bandwidth() / 2;
+      const cy = yScale(d.measurement);
+      let color;
+      switch (slice.id) {
+        case "foot":
+          color = "orange";
+          break;
+        case "vehicle":
+          color = "green";
+          break;
+        case "total kilometers":
+          color = "red";
+          break;
+        default:
+          color = "black";
+      }
+      svg
+        .append("circle")
+        .attr("cx", cx)
+        .attr("cy", cy)
+        .attr("r", 4)
+        .style("fill", color);
+      svg
+        .append("text")
+        .attr("x", cx)
+        .attr("y", cy - 8)
+        .style("text-anchor", "middle")
+        .text(d.measurement + " km");
+    });
   });
 
-  // Append circles and text for each data point (total kilometers)
-  slices[2].values.forEach(function (d) {
-    const cx = xScale(d.quarter) + xScale.bandwidth() / 2;
-    const cy = yScale(d.measurement);
-    svg
-      .append("circle")
-      .attr("cx", cx)
-      .attr("cy", cy)
-      .attr("r", 4)
-      .style("fill", "red");
-    svg
-      .append("text")
-      .attr("x", cx)
-      .attr("y", cy - 8)
-      .style("text-anchor", "middle")
-      .text(d.measurement + " km");
-  });
-
-  // Append circles and text for each data point (vehicle)
-  slices[1].values.forEach(function (d) {
-    const cx = xScale(d.quarter) + xScale.bandwidth() / 2;
-    const cy = yScale(d.measurement);
-    svg
-      .append("circle")
-      .attr("cx", cx)
-      .attr("cy", cy)
-      .attr("r", 4)
-      .style("fill", "green");
-    svg
-      .append("text")
-      .attr("x", cx)
-      .attr("y", cy - 8)
-      .style("text-anchor", "middle")
-      .text(d.measurement + " km");
-  });
   // Append text labels at the end of each line representing each slice
   slices.forEach(function (slice) {
     const lastDataPoint = slice.values[slice.values.length - 1];
@@ -155,6 +149,7 @@ console.log( data);
       .style("text-anchor", "middle")
       .text(`${slice.id}`);
   });
+
   // Append axes
   svg
     .append("g")
@@ -163,5 +158,4 @@ console.log( data);
     .call(xAxis);
 
   svg.append("g").attr("class", "y-axis").call(yAxis);
-});
 });
