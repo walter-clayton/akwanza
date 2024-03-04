@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const svg = d3
     .select("div#chart")
     .append("svg")
+    .attr("id", "chart-svg")
     .attr("width", width + 200)
     .attr("height", height)
     .append("g")
