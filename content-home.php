@@ -9,16 +9,7 @@ get_header(); ?>
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="introduction">
-                <?php
-                ?>
-                <img
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/akwanza_header_image.png"
-                    class="img-fluid" 
-                    alt="Wildlife Image"
-                    height="400px"
-                    width="100%"
-                />
-
+            
                 <h2 class="text-center">Wildlife Protection Overview</h2> <!-- Add Bootstrap class to center the heading -->
                 <p class="text-center"> <!-- Add Bootstrap class to center the paragraph -->
                     Big Life strives to prevent the poaching of all wildlife within our area
