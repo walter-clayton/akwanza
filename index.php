@@ -52,5 +52,4 @@ get_header(); ?>
 </div><!-- #primary -->
 
 <?php
-
- get_footer(); 
+ include 'content-footer.php';  
