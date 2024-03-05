@@ -49,3 +49,34 @@ label {
   list-style: none;
   padding-left: 0;
 }
+
+.container-fluid .img-fluid {
+  width: 100%;
+}
+
+.container-header {
+  position: relative;
+}
+
+.content-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.header-span {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+.img-fluid {
+  filter: brightness(50%);
+}

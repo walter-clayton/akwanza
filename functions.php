@@ -16,7 +16,7 @@ add_filter('unzip_file_use_ziparchive', '__return_false');
 // Add featured image functionality.
 add_theme_support('post-thumbnails');
 
-add_image_size('my-custom-image-size', 500, 1440);
+add_image_size('my-custom-image-size',1920, 400);
 
 
 // Add title tag functionality.
