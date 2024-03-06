@@ -22,7 +22,7 @@ get_header(); ?>
                 1+
                 <article <?php post_class(); ?>>
 
-                    <?php the_post_thumbnail('my-custom-image-size', 1920, 400); ?>
+                    <?php the_post_thumbnail('my-custom-image-size', 1920, 500); ?>
 
                     <header class="entry-header ">
                         <?php the_title('<h2 class="entry-title "><a href="' . esc_url(get_permalink()) . '">', '</a></h2>'); ?>
