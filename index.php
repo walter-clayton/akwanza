@@ -10,7 +10,7 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
         <?php include 'content-navbar.php';  ?>
         <?php include 'content-header.php';  ?>
-        <?php include 'content-home.php';  ?>
+        <?php include 'content-section1.php';  ?>
 
         <?php
         if (have_posts()) :

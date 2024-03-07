@@ -1,4 +1,4 @@
-<footer id="footer_content" class="site-footer bg-light text-dark py-4" role="contentinfo">
+<footer id="footer_content" class="site-footer  text-dark py-4" role="contentinfo">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">

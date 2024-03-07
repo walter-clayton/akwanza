@@ -1,16 +1,24 @@
+/**
+ * This script generates a line chart using D3.js library.
+ * The chart displays quarterly data for different measurements.
+ * The data is hardcoded and includes measurements for "on foot", "by vehicle", and "total kilometers".
+ * The script defines dimensions, margins, and scales for the chart.
+ * It then processes the data and generates the necessary SVG elements to draw the chart.
+ * Finally, it appends axes and labels to the chart.
+ */
 console.log("Script loaded");
 document.addEventListener("DOMContentLoaded", function () {
   // Define dimensions and margins
-  const width = 800;
+  const width = 600;
   const height = 600;
-  const margin = { top: 70, right: 20, bottom: 80, left: 80 };
+  const margin = { top: 50, right: 10, bottom: 80, left: 50 };
 
   // Select the div with id "chart" and append an SVG
   const svg = d3
     .select("div#chart")
     .append("svg")
     .attr("id", "chart-svg")
-    .attr("width", width + 200)
+    .attr("width", width + 40)
     .attr("height", height)
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
@@ -19,26 +27,26 @@ document.addEventListener("DOMContentLoaded", function () {
   var data = [
     {
       quarter: "Q1 2023",
-      foot: 40938,
-      vehicle: 134650,
+      "on foot": 40938,
+      "by vehicle": 134650,
       "total kilometers": 175588,
     },
     {
       quarter: "Q2 2023",
-      foot: 45061,
-      vehicle: 160093,
+      "on foot": 45061,
+      "by vehicle": 160093,
       "total kilometers": 205154,
     },
     {
       quarter: "Q3 2023",
-      foot: 50163,
-      vehicle: 162144,
+      "on foot": 50163,
+      "by vehicle": 162144,
       "total kilometers": 255317,
     },
     {
       quarter: "Q4 2023",
-      foot: 46107,
-      vehicle: 148052,
+      "on foot": 46107,
+      "by vehicle": 148052,
       "total kilometers": 194159,
     },
   ];
@@ -130,23 +138,23 @@ document.addEventListener("DOMContentLoaded", function () {
         .attr("x", cx)
         .attr("y", cy - 8)
         .style("text-anchor", "middle")
-        .text(d.measurement + " km");
+        .text(d.measurement);
     });
   });
 
   // Append text labels at the end of each line representing each slice
   slices.forEach(function (slice) {
-    const lastDataPoint = slice.values[slice.values.length - 1];
+    const lastDataPoint = slice.values[slice.values.length - 2];
     const lastCx = xScale(lastDataPoint.quarter) + xScale.bandwidth() / 2;
     const lastCy = yScale(lastDataPoint.measurement);
 
     // Increase the offset value for positioning the text labels outside the right margin
-    const textX = width; // Move further outside the right margin
+    const textX = width - 90; // Move further outside the right margin
 
     svg
       .append("text")
       .attr("x", textX)
-      .attr("y", lastCy - 10)
+      .attr("y", lastCy + 50)
       .style("text-anchor", "middle")
       .text(`${slice.id}`);
   });
