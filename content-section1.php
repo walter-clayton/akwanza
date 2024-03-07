@@ -5,17 +5,17 @@
 
 get_header(); ?>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="introduction">
+<div class="container chart-container">
+    <div class="row">
+        <div class="row d-flex flex-row flex-wrap-reverse ">
+            <div class="col-sm  description">
             
                 <h2 class="text-center">Wildlife Conservation</h2> 
-                <p class="text-center"> 
+                <p class="text-end"> 
                 The Big Life Foundation is currently patrolling approximately 1.6 million acres across the Amboseli-Tsavo-Kilimanjaro (Greater Amboseli) ecosystem in East Africa. 
                 </p>
             </div>
-            <div id="chart" class="svg-container"></div>
+            <div id="chart" class="col-sm svg-container text-center"></div>
         </div>
 </div>
 </div>

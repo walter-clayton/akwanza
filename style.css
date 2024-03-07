@@ -16,35 +16,10 @@ body {
 }
 
 a {
-  color: #073979;
   text-decoration: none;
 }
 
-.site-header {
-  border-bottom: 2px solid;
-}
-
-.site-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-}
-
-label {
-  display: block;
-}
-.axis text {
-  fill: #2b2929;
-  font-family: Georgia;
-  font-size: 120%;
-}
-.introduction {
-  text-align: center;
-}
-
+/* style the header */
 .container .img-fluid {
   width: 100%;
   height: auto;
@@ -70,4 +45,21 @@ label {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
+}
+/* style the chart */
+label {
+  display: block;
+}
+.axis text {
+  fill: #2b2929;
+  font-family: Georgia;
+  font-size: 10%;
+}
+/* style the section1 text */
+.chart-container {
+  margin-top: 80px;
+}
+
+.description {
+  padding-right: 10px;
 }
