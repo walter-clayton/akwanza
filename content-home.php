@@ -10,30 +10,13 @@ get_header(); ?>
         <div class="col-md-12">
             <div class="introduction">
             
-                <h2 class="text-center">Wildlife Protection Overview</h2> <!-- Add Bootstrap class to center the heading -->
-                <p class="text-center"> <!-- Add Bootstrap class to center the paragraph -->
-                    Big Life strives to prevent the poaching of all wildlife within our area
-                    of operation. We track and apprehend poachers and collaborate with local
-                    prosecutors to ensure that they are punished to the fullest extent of
-                    the law. One of the largest employers of local Maasai in the ecosystem,
-                    Big Life's community rangers are expertly trained and well-equipped to
-                    tackle a variety of wildlife crimes. Since our inception, poaching of
-                    all animals has dramatically declined in our area of operation.
-                </p>
-                <h3 class="text-center">Overview</h3> <!-- Add Bootstrap class to center the heading -->
-                <p class="text-center"> <!-- Add Bootstrap class to center the paragraph -->
-                    Big Life employs Maasai rangers from local communities who work
-                    collaboratively with a vast informer network and a number of tools to
-                    undertake a variety of activities including anti-poaching and
-                    trafficking, conflict mitigation, community support and much more. The
-                    2023 ranger activity in Kenya and Tanzania is summarized below:
+                <h2 class="text-center">Wildlife Conservation</h2> 
+                <p class="text-center"> 
+                The Big Life Foundation is currently patrolling approximately 1.6 million acres across the Amboseli-Tsavo-Kilimanjaro (Greater Amboseli) ecosystem in East Africa. 
                 </p>
             </div>
             <div id="chart" class="svg-container"></div>
-            
         </div>
-    </div>
-  
 </div>
-
+</div>
 <?php

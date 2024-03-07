@@ -45,38 +45,29 @@ label {
   text-align: center;
 }
 
-.commentlist {
-  list-style: none;
-  padding-left: 0;
-}
-
-.container-fluid .img-fluid {
+.container .img-fluid {
   width: 100%;
+  height: auto;
+  filter: brightness(50%);
 }
 
-.container-header {
+#container-header {
   position: relative;
 }
 
-.content-header {
+.w3-display-middle {
   position: absolute;
+  text-align: center;
+  width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -200%);
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  color: white;
-  width: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .header-span {
+  opacity: 0.75;
   display: block;
   font-size: 30px;
   font-weight: bold;
-  margin: 10px 0;
   text-transform: uppercase;
-}
-.img-fluid {
-  filter: brightness(50%);
 }
