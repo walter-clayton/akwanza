@@ -8,6 +8,7 @@
                      <a href="https://akwanza.teemill.com/" class="btn btn-dark btn-lg">Buy Now</a> 
                 </div>
             </div>
+            
             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/akwanza-t-shirt.png" class="col-sm svg-container text-center" style="height:500px"  alt="Chart Image">  
         </div>   
     </div>
