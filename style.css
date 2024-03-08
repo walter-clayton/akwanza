@@ -9,6 +9,8 @@ License: GNU General Public License v2 or later
 Text Domain:Akwanza
 */
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   margin: auto;
   line-height: 1.65;

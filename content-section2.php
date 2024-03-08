@@ -4,7 +4,7 @@
             <div class="col-sm description">
             
                 <h2 class="text-center p-3">Animal Population </h2> 
-                <p class="text-start"> 
+                <p class="text-lg-start text-sm-center"> 
                 20 000 animals have been added in the region since 2013.
                 </p> 
             </div>
