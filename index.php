@@ -11,7 +11,8 @@ get_header(); ?>
         <?php include 'content-navbar.php';  ?>
         <?php include 'content-header.php';  ?>
         <?php include 'content-section1.php';  ?>
-
+        <?php include 'content-section2.php';  ?>
+        <?php include 'content-section3.php';  ?>
         <?php
         if (have_posts()) :
 
