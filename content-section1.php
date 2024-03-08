@@ -8,7 +8,7 @@ get_header(); ?>
 <div class="container chart-container">
     <div class="row">
         <div class="row d-flex flex-row flex-wrap-reverse ">
-            <div class="col-sm  description">
+            <div class="col-sm description">
             
                 <h2 class="text-center">Wildlife Conservation</h2> 
                 <p class="text-end"> 
