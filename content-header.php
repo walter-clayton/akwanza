@@ -1,5 +1,5 @@
 <header class="container" id="container-header">
-<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/akwanza_header_image.png" style="height:500px" class="img-fluid img-responsive" alt="Wildlife Image">
+<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/akwanza_header_image.png" style="height:500px" class="img-fluid responsive-img" alt="Wildlife Image">
    <div class="w3-display-middle">
     <!-- <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span class="w3-hide-small w3-text-light-grey">Architects</span></h1>
   </div> --> 
