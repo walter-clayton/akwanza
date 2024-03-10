@@ -14,8 +14,9 @@ get_header(); ?>
                 The Big Life Foundation is currently patrolling approximately 1.6 million acres across the Amboseli-Tsavo-Kilimanjaro (Greater Amboseli) ecosystem in East Africa. 
                 </p>
             </div>
-            <div id="chart" class="col-sm svg-container text-center"></div>
+            <!-- <div id="chart" class="col-sm svg-container text-center"></div> -->
+            <div class="flourish-embed flourish-map col-sm svg-container text-center" data-src="visualisation/17095445"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
         </div>
-</div>
+</div> 
 </div>
 <?php
