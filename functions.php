@@ -16,7 +16,7 @@ add_filter('unzip_file_use_ziparchive', '__return_false');
 // Add featured image functionality.
 add_theme_support('post-thumbnails');
 
-add_image_size('my-custom-image-size',1920, 500);
+add_image_size('my-custom-image-size');
 
 
 // Add title tag functionality.
@@ -35,7 +35,9 @@ function enqueue_akwanza_scripts()
 add_action('wp_enqueue_scripts', 'enqueue_akwanza_scripts');
 
 
+
 // Enqueue Bootstrap CSS and JavaScript from CDN
+
 function enqueue_bootstrap()
 {
     // Register Bootstrap CSS
@@ -49,3 +51,10 @@ function enqueue_bootstrap()
     wp_enqueue_script('bootstrap');
 }
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
+
+function enqueue_custom_style() {
+    wp_enqueue_style('custom-style', get_template_directory_uri() . '/style.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_style');
+
+?>
