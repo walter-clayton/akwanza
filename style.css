@@ -11,7 +11,6 @@ Text Domain:Akwanza
 * {
   margin: 0;
   padding: 0;
-  /* line-height: 1.65; */
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
@@ -19,8 +18,20 @@ body {
   padding: 0;
 }
 h2 {
-  font-weight: 600;
-  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  margin-top: 20px;
+  /* padding: 1em 1em 0em 1em; */
+  line-height: 1.7em;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+}
+p {
+  font-size: 18px;
+  line-height: 1.5em;
+
+  letter-spacing: 0.25em;
+  /* padding: 1em 0em 1em 1em; */
 }
 a {
   text-decoration: none;
@@ -54,7 +65,7 @@ a {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   display: block;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 900;
   font-weight: bold;
   text-transform: uppercase;
@@ -68,3 +79,25 @@ a {
   font-family: Georgia;
   font-size: 10%;
 } */
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 21px;
+    letter-spacing: 0.2em;
+    text-align: left;
+  }
+  p {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 21px;
+    letter-spacing: 0.2em;
+    text-align: left;
+  }
+  p {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
+}
