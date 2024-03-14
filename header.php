@@ -9,9 +9,9 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
-    <div class="container-fluid mx-0 mr-0 px-0 pr-0">
+    <div class="container-fluid mx-0 px-0">
         <nav class="navbar navbar-expand-lg navbar">
-            <div class="container-fluid">
+            <div class="container-fluid mx-0 px-0">
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/home' ) ); ?>">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/akwanza_logo.png" alt="akwanza Logo" width="60" height="60" style="color: black;">
                 </a>
