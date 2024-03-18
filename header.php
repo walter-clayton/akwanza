@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
     <title>Akwanza</title>
+    <!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
     <!-- Include additional stylesheets, scripts, and metadata here -->
 </head>
 <body <?php body_class(); ?>>
@@ -20,18 +23,19 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo is_front_page() ? ' active' : ''; ?>" href="<?php echo esc_url( home_url( '/Home' ) ); ?>">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo is_page('About') ? 'active' : ''; ?>" href="<?php echo esc_url(get_permalink(get_page_by_path('About'))); ?>">About</a>
-                       </li>
-                        <li class="nav-item">
-                        <a class="nav-link <?php echo is_page('Reports') ? 'active' : ''; ?>" href="<?php echo esc_url(get_permalink(get_page_by_path('Reports'))); ?>">Reports</a>
-                        </li>    
-                    </ul>
-                </div>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link <?php echo is_front_page() ? 'active' : ''; ?>" href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <?php echo is_page('About') ? 'active' : ''; ?>" href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link <?php echo is_page('Reports') ? 'active' : ''; ?>" href="<?php echo esc_url(get_permalink(get_page_by_path('reports'))); ?>">Reports</a>
+        </li>    
+    </ul>
+</div>
+
             </div>
         </nav>
     </div>
