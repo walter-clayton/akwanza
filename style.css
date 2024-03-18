@@ -11,50 +11,59 @@ Text Domain:Akwanza
 * {
   margin: 0;
   padding: 0;
-  /* line-height: 1.65; */
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
   padding: 0;
+  width: 830px;
 }
 h2 {
-  font-weight: 600;
-  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  margin-top: 20px;
+  line-height: 1.5em;
+  font-weight: 800;
+  letter-spacing: 0.3em;
+}
+p {
+  font-size: 18px;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
 }
 a {
   text-decoration: none;
 }
-
-/* styling the content-header */
-#container-header .cover-image {
-  object-fit: cover;
-  width: 100%;
-  filter: brightness(50%);
-  height: 500px;
+.header-top {
+  background-size: cover;
+  margin: 0;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.header-tag-names {
+
+.div1,
+.div2,
+.div3 {
+  height: 100px;
+  margin-bottom: 20px;
   color: white;
 }
-
-#container-header {
-  position: relative;
-}
-
-.header-content {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.div1 p.header-tag-names,
+.div2 p.header-tag-names,
+.div3 p.header-tag-names {
+  color: white !important;
 }
 
 .header-span {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   display: block;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 900;
   font-weight: bold;
   text-transform: uppercase;
@@ -68,3 +77,33 @@ a {
   font-family: Georgia;
   font-size: 10%;
 } */
+@media screen and (max-width: 576px) {
+  body {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  h2 {
+    font-size: 21px;
+    letter-spacing: 0.2em;
+    text-align: left;
+  }
+  p {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  h2 {
+    font-size: 21px;
+    letter-spacing: 0.2em;
+    text-align: left;
+  }
+  p {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+  }
+}
