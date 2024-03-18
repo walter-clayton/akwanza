@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="col-sm-6 text-md-start text-center py-2">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/akwanza1.jpg" class="img-fluid object-fit-contain text-center" alt="T-shirt Image">  
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/akwanza-t-shirt.png" class="img-fluid object-fit-contain text-center" alt="T-shirt Image">  
             </div>
         </div>
 </div>
