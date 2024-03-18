@@ -1,43 +1,30 @@
 <?php
-
 /**
  * My Custom Theme functions and definitions
- 
+ *
  * @copyright  Copyright (c) 2024, Oana Grecu
- * @license    
+ * @license    MIT
  */
+
+// Prevent using ZipArchive for unzipping files
 add_filter('unzip_file_use_ziparchive', '__return_false');
 
-/**
- */
-
-
-
-// Add featured image functionality.
+// Add featured image functionality
 add_theme_support('post-thumbnails');
-
 add_image_size('my-custom-image-size');
 
-
-// Add title tag functionality.
-// add_theme_support( 'title-tag' );
-
-// Enqueue your custom script
+// Enqueue scripts and styles
 function enqueue_akwanza_scripts()
 {
-
+    // Enqueue D3.js
     wp_enqueue_script('d3', get_template_directory_uri() . '/assets/js/d3.v5.min.js', array(), '5.16.0', false);
 
-
+    // Enqueue custom script
     wp_enqueue_script('akwanza-script', get_template_directory_uri() . '/assets/js/script.js', array('d3'), '1.0', false);
 }
-
 add_action('wp_enqueue_scripts', 'enqueue_akwanza_scripts');
 
-
-
 // Enqueue Bootstrap CSS and JavaScript from CDN
-
 function enqueue_bootstrap()
 {
     // Register Bootstrap CSS
@@ -52,9 +39,9 @@ function enqueue_bootstrap()
 }
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
 
-function enqueue_custom_style() {
+// Enqueue custom style
+function enqueue_custom_style()
+{
     wp_enqueue_style('custom-style', get_template_directory_uri() . '/style.css');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_style');
-
-?>

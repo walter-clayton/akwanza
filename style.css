@@ -2,20 +2,22 @@
 Theme Name: Reports
 Theme URI: https://akwanza.com/Reports
 Author: Oana
-Author URI: https://akwanza.com
+Author URI: https://akwanza.com/Reports
 Description: This is my first custom theme!
 Version: 1.0.0
 License: GNU General Public License v2 or later
-Text Domain:Akwanza
+Text Domain:Reports
+Screenshot:/wp-content/themes/Reports/assets/images/akwanza_logo.png
 */
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 h2 {
   font-family: Arial, Helvetica, sans-serif;
@@ -39,8 +41,8 @@ a {
 
 /* styling the content-header */
 #container-header .cover-image {
-  object-fit: cover;
   width: 100%;
+  object-fit: cover;
   filter: brightness(50%);
   height: 500px;
 }
