@@ -7,17 +7,43 @@ Description: This is my first custom theme!
 Version: 1.0.0
 License: GNU General Public License v2 or later
 Text Domain:Reports
-Screenshot:/wp-content/themes/Reports/assets/images/akwanza_logo.png
+Screenshot: /assets/images/akwanza_logo.png
 */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+
+:root {
   font-family: Arial, Helvetica, sans-serif !important;
+}
+#primary .content-area {
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow-x: hidden;
+}
+#main {
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-top: 1em;
+  padding: 1em 1em 0em 0em;
+  line-height: 1.5em;
+  letter-spacing: 0.4em;
 }
 h2 {
   font-family: Arial, Helvetica, sans-serif;
@@ -31,7 +57,6 @@ h2 {
 p {
   font-size: 18px;
   line-height: 1.5em;
-
   letter-spacing: 0.25em;
   /* padding: 1em 0em 1em 1em; */
 }
@@ -39,39 +64,33 @@ a {
   text-decoration: none;
 }
 
-/* styling the content-header */
-#container-header .cover-image {
-  width: 100%;
-  object-fit: cover;
-  filter: brightness(50%);
-  height: 500px;
+#container-header .header-content {
+  width: 100vw;
+  background-image: url("assets/images/akwanza_header_image.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  height: 400px;
 }
 .header-tag-names {
   color: white;
 }
 
-#container-header {
-  position: relative;
-}
-
-.header-content {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .header-span {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
   display: block;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
-  font-weight: 900;
   font-weight: bold;
   text-transform: uppercase;
 }
+.custom-paragraph {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* style the chart in d3*/
 /* label {
   display: block;
@@ -81,25 +100,127 @@ a {
   font-family: Georgia;
   font-size: 10%;
 } */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
   h2 {
-    font-size: 21px;
+    font-size: 24px;
     letter-spacing: 0.2em;
-    text-align: left;
   }
   p {
     font-size: 16px;
     letter-spacing: 0.1em;
+  }
+
+  #content_about-page h1 {
+    text-align: start;
+    font-size: 24px;
+    padding: 0em 1em 1em 0em;
+  }
+  #content_about-page p {
+    font-size: 16px;
+    padding: 0em 0em 1em 0em;
+  }
+  #content_about-page h2 {
+    text-align: start;
+    font-size: 21px;
+    padding: 0em 1em 1em 0em;
+  }
+  #content_about-page {
+    width: 100%;
+    text-align: justify;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #section1 #chart1 {
+    width: auto;
+  }
+  #header-nav {
+    width: auto;
+    padding: 0 15px;
+  }
+  #container-header {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
   }
 }
 @media only screen and (min-width: 768px) {
   h2 {
     font-size: 21px;
     letter-spacing: 0.2em;
-    text-align: left;
   }
   p {
     font-size: 16px;
     letter-spacing: 0.1em;
   }
+  #content_about-page {
+    width: 100vw;
+    text-align: justify;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #content_about-page h1 {
+    text-align: start;
+    font-size: 28px;
+    padding: 1em 0em 1em 0em;
+  }
+  #content_about-page h2 {
+    text-align: start;
+    font-size: 24px;
+    padding: 1em 0em 1em 0em;
+  }
+
+  #content_about-page p {
+    font-size: 18px;
+  }
 }
+
+/* @media only screen and (max-width: 1200px) {
+  .card-container {
+    width: 100%;
+
+    flex: 1 1 100%;
+
+    .card {
+      flex: 1 1 30%;
+    }
+  }
+} */
+/* Extra small devices (phones, 800px and down)  */
+
+/* @media only screen and (max-width: 900px) {
+  body main .hero h1 {
+    text-align: center;
+  }
+  .card-container {
+    width: 100%;
+
+    flex: 1 1 100%;
+
+    .card {
+      flex: 1 1 calc(50% - 2em);
+    }
+  }
+} */
+
+/* small screens */
+
+/* @media only screen and (max-width: 600px) {
+  body main h2 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .card-container {
+    width: 100%;
+
+    flex: 1 1 100%;
+
+    .card {
+      flex: 1 1 100%;
+    }
+  }
+  #cart p,
+  #cart span {
+    font-size: 0.8em;
+  }
+} */
