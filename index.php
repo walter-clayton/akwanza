@@ -6,11 +6,12 @@ get_header();
 ?>
 
 <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+<main id="main" class="site-main" role="main" >
+
         <?php include 'content-header.php';  ?>
         <?php include 'content-section1.php';  ?>
-        <?php include 'content-section2.php';  ?>
-        <?php include 'content-section3.php';  ?>
+         <?php include 'content-section2.php';  ?>
+        <?php include 'content-section3.php';  ?> 
         <?php
         if (have_posts()) :
             while (have_posts()) :
@@ -18,7 +19,7 @@ get_header();
         ?>
                 <article <?php post_class(); ?>>
                     <div class="featured-image-container">
-                        <?php the_post_thumbnail('my-custom-image-size', array('class' => 'image-responsive')); ?>
+                        <?php the_post_thumbnail('my-custom-image-size', array('class' => 'img-fluid')); ?>
                     </div>
                 </article><!-- #post-## -->
         <?php

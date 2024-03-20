@@ -9,14 +9,12 @@
     <!-- Include additional stylesheets, scripts, and metadata here -->
 </head>
 <body <?php body_class(); ?>>
-<header>
-    <div class="container-fluid mx-0 px-0">
-        <nav class="navbar navbar-expand-md navbar">
-            <div class="container-fluid mx-0 px-0">
+<header id="header-nav">
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar"> 
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/Home' ) ); ?>">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/akwanza_logo.png" alt="akwanza Logo" width="60" height="60" style="color: black;">
                 </a>
-                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -33,7 +31,6 @@
                         </li>    
                     </ul>
                 </div>
-            </div>
         </nav>
     </div>
 </header>
