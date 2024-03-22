@@ -3,12 +3,12 @@
 <!-- Your About page content here -->
 
 <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main" role="main" style="max-width:830px; height:100vh;">
         <section class="about-section">
             <div class="container">
-                <h1>Reports</h1>
-                <p>Welcome to our About page. Here, you can learn more about our company.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget mauris vitae justo blandit dapibus.</p>
+                <div class="row d-flex flex-row justify-content-center">
+                    <h1 class="text-center">Comming soon!</h1>
+                </div>
                 <!-- Add more content as needed -->
             </div>
         </section>

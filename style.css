@@ -9,69 +9,85 @@ License: GNU General Public License v2 or later
 Text Domain:Reports
 Screenshot:/wp-content/themes/Reports/assets/images/akwanza_logo.png
 */
+
+@font-face {
+	font-family: "Colonna MT";
+	src: url("fonts/ColonnaMT.ttf") format("woff2"), url("fonts/COLONNA.TTF") format("truetype");
+	font-weight: 700;
+}
 * {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif !important;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	max-width: 1440px;
+}
+
+#akwanza-logo {
+	font-family: "Colonna MT", serif;
+	color: black;
+	font-weight: bold;
+	font-size: 45px;
+}
+.vertical-line {
+	border-left: 1px solid #000;
+	padding-left: 9px;
 }
 h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 28px;
-  margin-top: 20px;
-  /* padding: 1em 1em 0em 1em; */
-  line-height: 1.7em;
-  font-weight: 500;
-  letter-spacing: 0.4em;
+	font-family: "Colonna MT", serif;
+	font-size: 62px;
+	margin-top: 20px;
+	padding: 1em 1em 0em 1em;
+	line-height: 1.7em;
+	font-weight: 800;
+	letter-spacing: 0.4em;
 }
 p {
-  font-size: 18px;
-  line-height: 1.5em;
-
-  letter-spacing: 0.25em;
-  /* padding: 1em 0em 1em 1em; */
+	font-size: 18px;
+	line-height: 1.5em;
+	letter-spacing: 0.25em;
+	padding: 1em 0em 1em 1em;
 }
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /* styling the content-header */
-#container-header .cover-image {
-  width: 100%;
-  object-fit: cover;
-  filter: brightness(50%);
-  height: 500px;
-}
-.header-tag-names {
-  color: white;
-}
-
-#container-header {
-  position: relative;
-}
-
-.header-content {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.header-span {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  display: block;
-  font-size: 40px;
-  font-weight: 900;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+/* #container-header .cover-image { */
+/* object-fit: cover; */
+/* filter: brightness(50%); */
+/* height: 500px; */
+/* } */
+/* .header-tag-names { */
+/* color: white; */
+/* } */
+/*  */
+/* #container-header { */
+/* position: relative; */
+/* } */
+/*  */
+/* .header-content { */
+/* position: absolute; */
+/* text-align: center; */
+/* width: 100%; */
+/* top: 50%; */
+/* left: 50%; */
+/* transform: translate(-50%, -50%); */
+/* } */
+/*  */
+/* .header-span { */
+/* color: white; */
+/* font-family: Arial, Helvetica, sans-serif; */
+/* display: block; */
+/* font-size: 40px; */
+/* font-weight: 900; */
+/* font-weight: bold; */
+/* text-transform: uppercase; */
+/* } */
 /* style the chart in d3*/
 /* label {
   display: block;
@@ -81,25 +97,26 @@ a {
   font-family: Georgia;
   font-size: 10%;
 } */
-@media screen and (max-width: 576px) {
-  h2 {
-    font-size: 21px;
-    letter-spacing: 0.2em;
-    text-align: left;
-  }
-  p {
-    font-size: 16px;
-    letter-spacing: 0.1em;
-  }
-}
-@media only screen and (min-width: 768px) {
-  h2 {
-    font-size: 21px;
-    letter-spacing: 0.2em;
-    text-align: left;
-  }
-  p {
-    font-size: 16px;
-    letter-spacing: 0.1em;
-  }
-}
+/* @media screen and (max-width: 576px) { */
+/* h2 { */
+/* font-size: 21px; */
+/* letter-spacing: 0.2em; */
+/* text-align: left; */
+/* } */
+/* p { */
+/* font-size: 16px; */
+/* letter-spacing: 0.1em; */
+/* } */
+/* } */
+/* @media only screen and (min-width: 768px) { */
+/* h2 { */
+/* font-size: 21px; */
+/* letter-spacing: 0.2em; */
+/* text-align: left; */
+/* } */
+/* p { */
+/* font-size: 16px; */
+/* letter-spacing: 0.1em; */
+/* } */
+/* } */
+/*  */
