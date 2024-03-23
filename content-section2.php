@@ -8,7 +8,7 @@
                 </p> 
             </div>
            
-            <div class="flourish-embed flourish-bar-chart-race col-sm-6 text-center" data-src="visualisation/16977812"><script src="https://public.flourish.studio/resources/embed.js"></script></div>  
+            <!-- <div class="flourish-embed flourish-bar-chart-race col-sm-6 text-center" data-src="visualisation/16977812"><script src="https://public.flourish.studio/resources/embed.js"></script></div>   -->
             </div>
         </div>
 

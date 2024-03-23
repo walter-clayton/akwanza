@@ -7,7 +7,7 @@ Description: This is my first custom theme!
 Version: 1.0.0
 License: GNU General Public License v2 or later
 Text Domain:Reports
-Screenshot:/wp-content/themes/Reports/assets/images/akwanza_logo.png
+Screenshot:screenshot.svg
 */
 
 @font-face {
@@ -22,9 +22,16 @@ Screenshot:/wp-content/themes/Reports/assets/images/akwanza_logo.png
 }
 body {
 	margin: 0;
-	padding: 0;
+	margin: 0;
 	box-sizing: border-box;
-	max-width: 1440px;
+}
+#container-header-navbar {
+	background-color: #fbecd4;
+}
+
+.btn-success {
+	background-color: #4b958e;
+	color: white;
 }
 
 #akwanza-logo {
@@ -33,9 +40,8 @@ body {
 	font-weight: bold;
 	font-size: 45px;
 }
-.vertical-line {
-	border-left: 1px solid #000;
-	padding-left: 9px;
+#container-header {
+	background-color: #fbecd4;
 }
 h2 {
 	font-family: "Colonna MT", serif;
@@ -55,40 +61,11 @@ p {
 a {
 	text-decoration: none;
 }
+#intro-example {
+	margin-top: 36px;
+}
 
-/* styling the content-header */
-/* #container-header .cover-image { */
-/* object-fit: cover; */
-/* filter: brightness(50%); */
-/* height: 500px; */
-/* } */
-/* .header-tag-names { */
-/* color: white; */
-/* } */
-/*  */
-/* #container-header { */
-/* position: relative; */
-/* } */
-/*  */
-/* .header-content { */
-/* position: absolute; */
-/* text-align: center; */
-/* width: 100%; */
-/* top: 50%; */
-/* left: 50%; */
-/* transform: translate(-50%, -50%); */
-/* } */
-/*  */
-/* .header-span { */
-/* color: white; */
-/* font-family: Arial, Helvetica, sans-serif; */
-/* display: block; */
-/* font-size: 40px; */
-/* font-weight: 900; */
-/* font-weight: bold; */
-/* text-transform: uppercase; */
-/* } */
-/* style the chart in d3*/
+/* styling d3.charts
 /* label {
   display: block;
 }
@@ -97,7 +74,25 @@ a {
   font-family: Georgia;
   font-size: 10%;
 } */
-/* @media screen and (max-width: 576px) { */
+
+@media (min-width: 768px) and (max-width: 992px) {
+	#akwanza-logo {
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	#intro-example {
+		margin-top: 35px;
+	}
+	.vr {
+		display: none;
+	}
+	#akwanza-logo {
+		margin-left: 0;
+	}
+}
+
 /* h2 { */
 /* font-size: 21px; */
 /* letter-spacing: 0.2em; */
@@ -108,15 +103,3 @@ a {
 /* letter-spacing: 0.1em; */
 /* } */
 /* } */
-/* @media only screen and (min-width: 768px) { */
-/* h2 { */
-/* font-size: 21px; */
-/* letter-spacing: 0.2em; */
-/* text-align: left; */
-/* } */
-/* p { */
-/* font-size: 16px; */
-/* letter-spacing: 0.1em; */
-/* } */
-/* } */
-/*  */
