@@ -12,38 +12,43 @@
 
 </head>
 
-<body <?php body_class(""); ?>>
-    <nav class="navbar navbar-expand-sm" id="container-header-navbar">
-        <div class="container-fluid" id="container-header">
-            <a class="navbar-brand" id="akwanza-logo" href="<?php echo esc_url(home_url('/Home')); ?>">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/akwanza_logo.png"
-                    alt="akwanza Logo" width="70" height="80" style="color: black;">AKWANZA
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link <?php echo is_front_page() ? 'active' : ''; ?>"
-                            href="<?php echo esc_url(home_url('/home')); ?>">Home</a>
-                    </li>
-                    <div class="vr" style="height: 40px; width:2px; color:black;"></div>
-                    <li class="nav-item ">
-                        <a class="nav-link <?php echo is_page('About') ? 'active' : ''; ?>"
-                            href="<?php echo esc_url(get_permalink(get_page_by_path('about'))); ?>">About</a>
-                    </li>
-                </ul>
-                <div id="button-navbar">
-                    <a href="https://akwanza.teemill.com" class="btn bt-lg btn-success"> <span
-                            style="margin-right:4px;"><i class="fas fa-tshirt"></i></span>
-                        Shop</a>
-                </div>
+<body <?php body_class(); ?>>
+    <nav class="navbar navbar-expand-sm">
+        <a class="navbar-brand" id="akwanza-logo" href="<?php echo esc_url(home_url('/Home')); ?>">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/akwanza_logo.png"
+                alt="akwanza Logo" width="70" height="80" style="color: black;">AKWANZA
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Your sandwich icon goes here (e.g., hamburger menu icon) -->
+            &#9776;
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
+            <ul class="navbar-nav me-center">
+                <li class="nav-item">
+                    <a class="nav-link <?php echo is_front_page() ? 'active' : ''; ?>"
+                        href="<?php echo esc_url(home_url('/home')); ?>">Home</a>
+                </li>
+                <span class="vr" style="height: 40px; width:2px; color:black;"></span>
+
+                <li class="nav-item">
+                    <a class="nav-link <?php echo is_page('About') ? 'active' : ''; ?>"
+                        href="<?php echo esc_url(get_permalink(get_page_by_path('/about'))); ?>">About</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <a href="https://akwanza.teemill.com" class="btn bt-lg btn-success">
+                    <span><i class="fas fa-tshirt mx-2"></i></span>Shop</a>
             </div>
         </div>
     </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

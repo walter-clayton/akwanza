@@ -13,7 +13,7 @@ Screenshot:screenshot.svg
 @font-face {
 	font-family: "Colonna MT";
 	src: url("fonts/ColonnaMT.ttf") format("woff2"), url("fonts/COLONNA.TTF") format("truetype");
-	font-weight: 700;
+	font-weight: 600;
 }
 * {
 	margin: 0;
@@ -22,28 +22,69 @@ Screenshot:screenshot.svg
 }
 body {
 	margin: 0;
-	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
-#container-header-navbar {
+.navbar {
 	background-color: #fbecd4;
+	color: black;
+	margin: 0;
+	padding: 0px 15px 0px 15px;
 }
 
+.navbar-brand img {
+	width: 50px;
+	height: auto;
+}
+
+.navbar-toggler {
+	color: black;
+	border-color: black;
+}
+/* styling the navbar */
+
+#akwanza-logo {
+	margin: 0;
+	font-family: "Colonna MT", serif;
+	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+}
 .btn-success {
 	background-color: #4b958e;
 	color: white;
 }
+/* styling the header */
+.flex-container {
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
 
-#akwanza-logo {
-	font-family: "Colonna MT", serif;
-	color: black;
-	font-weight: bold;
-	font-size: 45px;
+.background {
+	background-color: lightgrey;
+	position: relative;
 }
-#container-header {
-	background-color: #fbecd4;
+
+.crane {
+	width: 100%;
+	height: auto;
+	/* display: inline-block; */
 }
-h2 {
+
+.overlay {
+	background-color: rgba(37, 37, 37, 0);
+	position: absolute;
+	font-size: 0.5em;
+	padding: 5px;
+	color: white;
+	left: 82%;
+	top: 28%;
+	text-align: start;
+	transform: translate(-50%, -50%); /* Center the overlay */
+	width: 100%;
+}
+/* h2 {
 	font-family: "Colonna MT", serif;
 	font-size: 62px;
 	margin-top: 20px;
@@ -57,12 +98,54 @@ p {
 	line-height: 1.5em;
 	letter-spacing: 0.25em;
 	padding: 1em 0em 1em 1em;
-}
+} */
 a {
 	text-decoration: none;
 }
-#intro-example {
-	margin-top: 36px;
+@media only screen and (min-width: 800px) {
+}
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 900px) {
+	.background {
+		height: auto;
+	}
+	.overlay {
+		left: 50%;
+		top: 13%;
+		text-align: center;
+		padding: 6px;
+		margin-top: 10px;
+	}
+	.overlay h1 {
+		font-size: 24px;
+	}
+
+	.overlay h4 {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.overlay {
+		text-align: center;
+		padding: 6px;
+		margin-top: 20px;
+	}
+	.overlay h1 {
+		font-size: 20px;
+	}
+
+	.overlay h4 {
+		font-size: 16px;
+	}
+	.vr {
+		display: none;
+	}
+	#akwanza-logo {
+		font-size: 30px;
+	}
 }
 
 /* styling d3.charts
@@ -74,33 +157,3 @@ a {
   font-family: Georgia;
   font-size: 10%;
 } */
-
-@media (min-width: 768px) and (max-width: 992px) {
-	#akwanza-logo {
-		margin-left: 0;
-	}
-}
-
-@media (min-width: 360px) and (max-width: 767px) {
-	#intro-example {
-		margin-top: 35px;
-	}
-	.vr {
-		display: none;
-	}
-	#akwanza-logo {
-		margin-left: 0;
-		font-size: 37px;
-	}
-}
-
-/* h2 { */
-/* font-size: 21px; */
-/* letter-spacing: 0.2em; */
-/* text-align: left; */
-/* } */
-/* p { */
-/* font-size: 16px; */
-/* letter-spacing: 0.1em; */
-/* } */
-/* } */
