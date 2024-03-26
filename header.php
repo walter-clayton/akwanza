@@ -12,7 +12,7 @@
 
 </head>
 
-<body <?php body_class(""); ?>>
+<body <?php body_class("container-fluid"); ?>>
     <nav class="navbar navbar-expand-sm">
         <a class="navbar-brand" id="akwanza-logo" href="<?php echo esc_url(home_url('/Home')); ?>">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/akwanza_logo.png"

@@ -1,7 +1,8 @@
-<div id="primary" class="content-area container">
+<div id="primary" class="content-area container-fluid">
     <main id="main" class="site-main row" role="main">
         <?php get_header(); ?>
         <?php include 'content-header.php'; ?>
+        <?php include 'content-section1.php'; ?>
 
         <?php
         if (have_posts()):
