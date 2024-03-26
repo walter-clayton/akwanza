@@ -1,4 +1,4 @@
-<div class="container-fluid flex-container ">
+<div class="container-fluid m-0 p-0" id="header-container">
     <div class="background">
         <img class="crane" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Header.svg"
             class="img-fluid">

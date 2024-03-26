@@ -24,7 +24,7 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	max-width: 1440px;
+	width: fit-content;
 	margin: 0 auto;
 	height: auto;
 }
@@ -34,8 +34,7 @@ body {
 	background-color: #fbecd4;
 	color: black;
 	margin: 0;
-	padding: 15px 15px 15px 15px;git add .
-	
+	padding: 15px 15px 15px 15px;
 }
 
 .navbar-brand img {
@@ -65,11 +64,11 @@ body {
 	color: white;
 }
 /* styling the header */
-.flex-container {
-	width: auto;
-	display: flex;
+#header-container {
+	width: 100%;
+
 	align-items: center;
-	padding: 0;
+	padding: 0 15px;
 }
 
 .background {
