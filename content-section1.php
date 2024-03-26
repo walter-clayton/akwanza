@@ -8,6 +8,6 @@
                     
                     </div>
                     <!-- <div id="chart" class="col-sm-6 svg-container text-center"></div> -->
-                    <div class="flourish-embed flourish-map col-sm-6 text-center" data-src="visualisation/17095445"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                    <!-- <div class="flourish-embed flourish-map col-sm-6 text-center" data-src="visualisation/17095445"><script src="https://public.flourish.studio/resources/embed.js"></script></div> -->
                 </div>
 </div>

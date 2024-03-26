@@ -7,72 +7,148 @@ Description: This is my first custom theme!
 Version: 1.0.0
 License: GNU General Public License v2 or later
 Text Domain:Reports
-Screenshot:/wp-content/themes/Reports/assets/images/akwanza_logo.png
+Screenshot:screenshot.svg
 */
+
+@font-face {
+	font-family: "Colonna MT";
+	src: url("fonts/ColonnaMT.ttf") format("woff2"), url("fonts/COLONNA.TTF") format("truetype");
+	font-weight: 600;
+}
 * {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif !important;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 28px;
-  margin-top: 20px;
-  /* padding: 1em 1em 0em 1em; */
-  line-height: 1.7em;
-  font-weight: 500;
-  letter-spacing: 0.4em;
+.navbar {
+	background-color: #fbecd4;
+	color: black;
+	margin: 0;
+	padding: 0px 15px 0px 15px;
+}
+
+.navbar-brand img {
+	width: 50px;
+	height: auto;
+}
+
+.navbar-toggler {
+	color: black;
+	border-color: black;
+}
+/* styling the navbar */
+
+#akwanza-logo {
+	margin: 0;
+	font-family: "Colonna MT", serif;
+	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.btn-success {
+	background-color: #4b958e;
+	color: white;
+}
+/* styling the header */
+.flex-container {
+	display: flex;
+	align-items: center;
+	padding: 0;
+}
+
+.background {
+	background-color: lightgrey;
+	position: relative;
+}
+
+.crane {
+	width: 100%;
+	height: auto;
+	/* display: inline-block; */
+}
+
+.overlay {
+	background-color: rgba(37, 37, 37, 0);
+	position: absolute;
+	font-size: 0.5em;
+	padding: 5px;
+	color: white;
+	left: 82%;
+	top: 28%;
+	text-align: start;
+	transform: translate(-50%, -50%); /* Center the overlay */
+	width: 100%;
+}
+/* h2 {
+	font-family: "Colonna MT", serif;
+	font-size: 62px;
+	margin-top: 20px;
+	padding: 1em 1em 0em 1em;
+	line-height: 1.7em;
+	font-weight: 800;
+	letter-spacing: 0.4em;
 }
 p {
-  font-size: 18px;
-  line-height: 1.5em;
-
-  letter-spacing: 0.25em;
-  /* padding: 1em 0em 1em 1em; */
-}
+	font-size: 18px;
+	line-height: 1.5em;
+	letter-spacing: 0.25em;
+	padding: 1em 0em 1em 1em;
+} */
 a {
-  text-decoration: none;
+	text-decoration: none;
+}
+@media only screen and (min-width: 800px) {
+}
+@media only screen and (max-width: 1200px) {
 }
 
-/* styling the content-header */
-#container-header .cover-image {
-  width: 100%;
-  object-fit: cover;
-  filter: brightness(50%);
-  height: 500px;
-}
-.header-tag-names {
-  color: white;
+@media only screen and (max-width: 900px) {
+	.background {
+		height: auto;
+	}
+	.overlay {
+		left: 50%;
+		top: 13%;
+		text-align: center;
+		padding: 6px;
+		margin-top: 10px;
+	}
+	.overlay h1 {
+		font-size: 24px;
+	}
+
+	.overlay h4 {
+		font-size: 20px;
+	}
 }
 
-#container-header {
-  position: relative;
+@media only screen and (max-width: 600px) {
+	.overlay {
+		text-align: center;
+		padding: 6px;
+		margin-top: 20px;
+	}
+	.overlay h1 {
+		font-size: 20px;
+	}
+
+	.overlay h4 {
+		font-size: 16px;
+	}
+	.vr {
+		display: none;
+	}
+	#akwanza-logo {
+		font-size: 30px;
+	}
 }
 
-.header-content {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.header-span {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  display: block;
-  font-size: 40px;
-  font-weight: 900;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-/* style the chart in d3*/
+/* styling d3.charts
 /* label {
   display: block;
 }
@@ -81,25 +157,3 @@ a {
   font-family: Georgia;
   font-size: 10%;
 } */
-@media screen and (max-width: 576px) {
-  h2 {
-    font-size: 21px;
-    letter-spacing: 0.2em;
-    text-align: left;
-  }
-  p {
-    font-size: 16px;
-    letter-spacing: 0.1em;
-  }
-}
-@media only screen and (min-width: 768px) {
-  h2 {
-    font-size: 21px;
-    letter-spacing: 0.2em;
-    text-align: left;
-  }
-  p {
-    font-size: 16px;
-    letter-spacing: 0.1em;
-  }
-}
