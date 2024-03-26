@@ -45,3 +45,11 @@ function enqueue_custom_style()
     wp_enqueue_style('custom-style', get_template_directory_uri() . '/style.css');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_style');
+function force_https()
+{
+    if (!is_ssl()) {
+        wp_redirect('https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], 301);
+        exit();
+    }
+}
+add_action('template_redirect', 'force_https');

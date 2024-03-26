@@ -12,21 +12,20 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("container-fluid m-0 p-0"); ?>>
     <nav class="navbar navbar-expand-sm">
         <a class="navbar-brand" id="akwanza-logo" href="<?php echo esc_url(home_url('/Home')); ?>">
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/akwanza_logo.png"
-                alt="akwanza Logo" width="70" height="80" style="color: black;">AKWANZA
+                alt="akwanza Logo" width="80" height="90" style="color: black;">AKWANZA
 
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- Your sandwich icon goes here (e.g., hamburger menu icon) -->
-            &#9776;
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                class="fas fa-solid fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
-            <ul class="navbar-nav me-center">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link <?php echo is_front_page() ? 'active' : ''; ?>"
                         href="<?php echo esc_url(home_url('/home')); ?>">Home</a>
