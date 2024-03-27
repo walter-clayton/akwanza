@@ -1,4 +1,4 @@
-<div id="primary" class="content-area container-fluid">
+<div id="primary" class="content-area">
     <main id="main" class="site-main row" role="main">
         <?php get_header(); ?>
         <?php include 'content-header.php'; ?>
