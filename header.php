@@ -19,7 +19,7 @@
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-solid fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="d-flex align-items-center justify-content-center flex-grow-1">
+                <div class="d-flex align-items-center-md justify-content-center-md flex-grow-1">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <a class="nav-link <?php echo is_front_page() ? 'active' : ''; ?>" href="<?php echo esc_url(home_url('/home')); ?>">Home</a>
@@ -36,14 +36,16 @@
                 </div>
             </div>
         </nav>
-        <div class="p-5 container-fluid text-center bg-image text-white" style="
+        <div class="d-flex flex-column justify-content-center text-align-center container-fluid text-center bg-image text-white" style="
                     background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/Header.svg');
-                    height: 40%;
+                    height: 40vh;
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center center;">
-            <h1 style="font-family: 'Colonna MT', serif;">Uniting for Wildlife Conservation</h1>
-            <h4>Together, Every Purchase is a Pledge to Protect</h4>
+            <div style="height: 10%">
+                <h1 style="font-family: 'Colonna MT', serif;">Uniting for Wildlife Conservation</h1>
+                <h4>Together, Every Purchase is a Pledge to Protect</h4>
+            </div>
         </div>
 
     </header>

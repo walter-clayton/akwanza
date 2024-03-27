@@ -203,3 +203,12 @@ p {
   font-family: Georgia;
   font-size: 10%;
 } */
+
+@media (min-width: 768px) {
+	.align-items-center-md {
+		align-items: center;
+	}
+	.justify-content-center-md {
+		justify-content: center;
+	}
+}
