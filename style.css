@@ -15,26 +15,29 @@ Screenshot:screenshot.png
 	src: url("fonts/ColonnaMT.ttf") format("woff2"), url("fonts/COLONNA.TTF") format("truetype");
 	font-weight: 600;
 }
-* {
-	margin: 0;
+
+html, body {
+	height: 100%;
+	margin: 0 !important;
 	padding: 0;
+	overflow-x: hidden !important; /* Prevent horizontal scrollbar */
+  }
+
+* {
 	font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	width: fit-content;
-	margin: 0 auto;
-	height: auto;
+	/* height: auto; */
 }
 
 /* styling the navbar */
 .navbar {
+	width: 100%;
 	background-color: #fbecd4;
 	color: black;
-	margin: 0;
-	padding: 15px 15px 15px 15px;
 }
 
 .navbar-brand img {
@@ -53,24 +56,22 @@ body {
 	font-weight: 800;
 	font-size: 1.5em;
 }
-.btn-success {
+.btn-shop {
 	background-color: #4b958e;
 	color: white;
 	padding-left: 1.75rem;
 	padding-right: 1.75rem;
 }
-.btn-success:hover {
+.btn-shop:hover {
 	background-color: #4b958e;
 	color: white;
 }
 /* styling the header */
+
 #header-container {
 	width: 100%;
-
-	align-items: center;
-	padding: 0 15px;
+	margin: auto;
 }
-
 .background {
 	position: relative;
 }
@@ -85,39 +86,30 @@ body {
 	background-color: rgba(37, 37, 37, 0);
 	position: absolute;
 	font-size: 0.5em;
-	padding: 5px;
 	color: white;
-	left: 82%;
-	top: 28%;
+	left: 59%;
+	top: 12%;
 	text-align: start;
-	transform: translate(-50%, -50%); /* Center the overlay */
-	width: 100%;
+	transform: translate(-50%, -50%);
+	width: max-content;
 }
-/* h2 {
-	font-family: "Colonna MT", serif;
-	font-size: 62px;
-	margin-top: 20px;
-	padding: 1em 1em 0em 1em;
-	line-height: 1.7em;
-	font-weight: 800;
-	letter-spacing: 0.4em;
-}
-p {
-	font-size: 18px;
-	line-height: 1.5em;
-	letter-spacing: 0.25em;
-	padding: 1em 0em 1em 1em;
-} */
+
 a {
 	text-decoration: none;
 }
 @media only screen and (min-width: 800px) {
 }
 @media only screen and (max-width: 1200px) {
+	#header-container {
+		width: 100%;
+	}
+	.navbar {
+		width: 100%;
+	}
 	.overlay h4 {
 		font-size: 20px;
 	}
-	.btn-success {
+	.btn-shop {
 		padding-left: 5px;
 		padding-right: 15px;
 	}
@@ -146,7 +138,7 @@ a {
 	.overlay h4 {
 		font-size: 20px;
 	}
-	.btn-success {
+	.btn-shop {
 		padding-left: 5px;
 		padding-right: 15px;
 	}
@@ -165,6 +157,10 @@ a {
 	.overlay h4 {
 		font-size: 16px;
 	}
+	.nav-item {
+		align-items: start;
+		justify-content: start;
+	}
 	.vr {
 		display: none;
 	}
@@ -175,13 +171,28 @@ a {
 		font-size: 16px;
 		width: fit-content;
 	}
-	.btn-success {
+	.btn-shop {
 		align-items: start;
 		padding-right: 15px;
 		padding-left: 5px;
 		border: none;
 	}
 }
+/* h2 {
+	font-family: "Colonna MT", serif;
+	font-size: 62px;
+	margin-top: 20px;
+	padding: 1em 1em 0em 1em;
+	line-height: 1.7em;
+	font-weight: 800;
+	letter-spacing: 0.4em;
+}
+p {
+	font-size: 18px;
+	line-height: 1.5em;
+	letter-spacing: 0.25em;
+	padding: 1em 0em 1em 1em;
+} */
 
 /* styling d3.charts
 /* label {
@@ -192,3 +203,12 @@ a {
   font-family: Georgia;
   font-size: 10%;
 } */
+
+@media (min-width: 768px) {
+	.align-items-center-md {
+		align-items: center;
+	}
+	.justify-content-center-md {
+		justify-content: center;
+	}
+}
